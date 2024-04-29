@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geffe Generator</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <style>
+        body, h1 {
+            font-family: "Raleway", sans-serif
+        }
+
+        body, html {
+            height: 100%
+        }
+
+        .bgimg {
+            background-image: url('https://indieground.net/wp-content/uploads/2023/03/Freebie-GradientTextures-Preview-02.jpg');
+            min-height: 100%;
+            background-position: center;
+            background-size: cover;
+        }
+        tr {
+             background-color: #ffffff;
+        }
+        th, td {
+            color: #7e40b1;
+            font-size: 14px;
+    padding: 8px; /* Example padding */
+        }
+
+        tr:hover {
+            background-color: #1e2359;
+        }
+     .button-47 {
+            align-items: center;
+            background: #FFFFFF;
+            border: 0 solid #E2E8F0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            box-sizing: border-box;
+            color: #1A202C;
+            display: inline-flex;
+            font-family: Inter, sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            height: 56px;
+            justify-content: center;
+            line-height: 24px;
+            overflow-wrap: break-word;
+            padding: 24px;
+            text-decoration: none;
+            width: auto;
+            border-radius: 8px;
+            cursor: pointer;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+        }
+
+
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;}
+
+        li {
+            float: left;
+        }
+
+        li .a {
+            display: block;
+            color: #000000;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        /* Change the link color to #111 (black) on hover */
+
+
+.button-47 {
+  align-items: center;
+  background: #FFFFFF;
+  border: 0 solid #E2E8F0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-sizing: border-box;
+  color: #1A202C;
+  display: inline-flex;
+  font-family: Inter, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  height: 56px;
+  justify-content: center;
+  line-height: 24px;
+  overflow-wrap: break-word;
+  padding: 24px;
+  text-decoration: none;
+  width: auto;
+  border-radius: 8px;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+    </style>
+</head>
+<body>
+<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+    <div class="w3-display-topleft w3-padding-large w3-xlarge">
+        Cryptography project
+    </div>
+  <div class="w3-display-topmiddle w3-padding-large">
+        <ul>
+            <li>
+                <form class="a" action="/" method="get">
+                    <button>Geffe</button>
+                </form>
+            </li>
+            <li>
+                <form  class="a"action="/correlation" method="get">
+                    <button>Correlation precentage</button>
+                </form>
+            </li>
+            <li>
+                <form class="a" action="/attack" method="get">
+                    <button>Correlation attack</button>
+                </form>
+            </li>
+        </ul>
+    </div>
+    <div class="w3-display-middle">
+        <h1>Geffe Generator example</h1>
+        <h2>Three LFSRs</h2>
+        <table>
+            <tr>
+                <th>LFSR1</th>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <th>LFSR2</th>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <th>LFSR3</th>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+                <td>1</td>
+            </tr>
+        </table>
+        <h2>Boolean function used</h2>
+        <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/0689f6ed96de8deeb854e12292e1826c67b17dac"
+             alt=""></img>
+        <h2>Generated Output</h2>
+    <br>
+        <form action="/generate" method="post">
+            <button class="button-47" type="submit">Generate Output</button>
+        </form><br> <br>
+        {% if output_sequence %}
+            <table>
+                <tr>
+                    <th>Output</th>
+                    {% for bit in output_sequence %}
+                        <td>{{ bit }}</td>
+                    {% endfor %}
+                </tr>
+            </table>
+        {% endif %}
+    </div>
+
+    <div class="w3-display-bottomleft w3-padding-large">
+        Ljubica Ristovska 212016
+    </div>
+</div>
+
+
+</body>
+</html>
